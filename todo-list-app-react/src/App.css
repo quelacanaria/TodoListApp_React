@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-color: #F9FAFB;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titleContainer{
+    height: 50px;
+    color: white;
+    text-shadow: 5px 5px 5px hsl(0, 0%, 0%, .5), 
+                 -5px 5px 5px hsl(0, 0%, 0%, .5),
+                 5px -5px 5px hsl(0, 0%, 0%, .5),
+                 -5px -5px 5px hsl(0, 0%, 0%, .5);
+    text-align: center;
+    font-size: 2.5rem;
+}
+.AppContainer{
+    background-color: #10B981;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 0%, .5);
+    height: 500px;
+    width: 800px;
+}
+.TodoAddContainer{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ulContainer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TodoAddContainer input{
+    border-radius: 5px;
+    border: 1px transparent;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 0%, .5);
+    width: 60%;
+    height: 30px;
+    padding: 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.TodoAddContainer input:hover{
+    transform: scale(1.05);
+}
+
+.TodoAddContainer .addBtn{
+    background-color: #3B82F6;
+    color: #F9FAFB;
+    text-shadow: 1px 1px 5px black;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 0%, .5);
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 20%;
+    height: 50px;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.TodoAddContainer .addBtn:hover{
+    transform: scale(1.25);
+}
+
+.TodoAddContainer .addBtn:active{
+    transform: scale(1);
+    box-shadow: 5px 5px 5px transparent;
+}
+
+.listContainer{
+    scrollbar-width: none;
+    background-color: #F9FAFB;
+    border-radius: 10px;
+    overflow: auto;
+    height: 90%;
+    width: 90%;
+}
+
+.TaskList{
+    background-color: #3B82F6;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 0%, .5);
+    text-decoration: none;
+    width: 95%;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.TaskList:hover{
+     transform: scale(1.03);
+}
+
+.TaskList p{
+    word-break: break-all;
+    color: #F9FAFB;
+    text-shadow: 1px 1px 5px black;
+    width: 60%;
+    font-size: 1.5rem;
+    margin-left: 2%;
+}
+
+.BtnContainer{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+.edit,
+.del,
+.up,
+.down{
+    background-color: #10B981;
+    color: #F9FAFB;
+    text-shadow: 1px 1px 5px black;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px hsl(0, 0%, 0%, .5);
+    font-size: 1.5rem;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 90px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+.edit:hover,
+.del:hover,
+.up:hover,
+.down:hover{
+    transform: scale(1.10);
+}
+
+.edit:active,
+.del:active,
+.up:active,
+.down:active{
+    transform: scale(1);
+    box-shadow: 5px 5px 5px transparent;
+}
+.deleteList{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deleteContainer{
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.delQuestionContainer{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.containerBtn{
+    width: 100%;
+    margin-top: 10px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.containerBtn:nth-child(1) button{
+    width: 90px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.containerBtn:nth-child(2) button{
+    width: 90px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: transform 0.3s;
+}
+
+.containerBtn:nth-child(2) button:hover{
+    transform: scale(1.15);
+}
+
+.Error1{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    display: none;
+    z-index: 9999;
+}
+.Error1Container{
+    background-color: white;
+    justify-self: center;
+    border: 1px solid;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.input1{
+    height: 40px;
+    font-size: 1.5rem;
+}
+
+@media(max-width: 800px){
+    .AppContainer{
+    width: 300px;
+    height: 400px;
+    }
+    .TodoAddContainer input{
+        width: 50%;
+        height: 20px;
+    }
+    .TodoAddContainer .addBtn{
+        height: 40px;
+    }
+
+    .TaskList p{                
+        font-size: 1rem;
+    }
+    .edit, .del, .up, .down {
+    font-weight: bold;
+    font-size: 1rem;
+    width: 90px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+}
