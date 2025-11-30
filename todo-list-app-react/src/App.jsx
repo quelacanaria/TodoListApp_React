@@ -153,9 +153,9 @@ function App() {
           </div>
        </div>)}
        {editIndex !==null && (
-        <div className="deleteList">
-          <div  className="deleteContainer">
-            <div className="delQuestionContainer">
+        <div className="updateList">
+          <div  className="updateContainer">
+            <div className="upQuestionContainer">
               <input className="input1" type="text" value={editValue} onChange={(event) => setEditValue(event.target.value)} />
             </div>
             <div className="containerBtn">  
